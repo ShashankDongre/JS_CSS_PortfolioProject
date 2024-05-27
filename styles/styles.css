@@ -199,7 +199,7 @@ section {
   top: -40px;  /* Position above the button */
   left: 50%;
   transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8);  /* Dark background for better visibility */
+  background-color: #333;  /* Dark background for better visibility */
   color: #fff;  /* White text for contrast */
   padding: 5px 10px;
   border-radius: 6px;
@@ -619,6 +619,11 @@ body:not(.light-mode) {
   padding-bottom: 1rem;
 }
 
+/* Contact Section */
+.contact-container {
+  padding: 2rem 0;
+}
+
 .contact-content-con {
   display: flex;
   padding-top: 3.5rem;
@@ -638,20 +643,21 @@ body:not(.light-mode) {
 .contact-content-con .left-contact .contact-info .contact-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  margin-bottom: 1rem;
+  
 }
 .contact-content-con .left-contact .contact-info .contact-item p {
   margin: 0.3rem 0 !important;
   padding: 0 !important;
 }
 .contact-content-con .left-contact .contact-info .contact-item .icon {
-  display: grid;
-  grid-template-columns: 40px 1fr;
-}
-.contact-content-con .left-contact .contact-info .contact-item .icon i {
   display: flex;
   align-items: center;
+  margin-right: 1rem;
+}
+.contact-content-con .left-contact .contact-info .contact-item .icon i {
   font-size: 1.3rem;
+  margin-right: 0.5rem;
 }
 .contact-content-con .left-contact .contact-icon {
   display: flex;
@@ -713,6 +719,32 @@ body:not(.light-mode) {
   justify-content: flex-start;
 }
 
+.contact-icons .contact-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  background-color: var(--color-grey-5);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-icons .contact-icon a:hover {
+  background-color: var(--color-secondary);
+}
+
+.right-contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-control {
+  margin-bottom: 1rem;
+}
+
 /*Independed components*/
 .btn-con {
   display: flex;
@@ -723,23 +755,33 @@ body:not(.light-mode) {
   border-radius: 30px;
   color: inherit;
   font-weight: 600;
+  padding: 0.8rem 2rem;
   position: relative;
   border: 1px solid var(--color-secondary);
+  background-color: var(--color-secondary);
+  color: var(--color-white);
   display: flex;
   align-self: flex-start;
   align-items: center;
   overflow: hidden;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 .main-btn .btn-text {
-  padding: 0 2rem;
+  padding: 0.5rem;
 }
 .main-btn .btn-icon {
-  background-color: var(--color-secondary);
+ /* background-color: var(--color-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   padding: 1rem;
+  
+  */
+  margin-right: 0.5rem;
 }
 .main-btn::before {
   content: "";
@@ -760,7 +802,9 @@ body:not(.light-mode) {
   transform: translateX(0);
   transition: all 0.4s ease-out;
 }
-
+.main-btn .btn-icon i {
+  font-size: 1.2rem;
+}
 .main-title {
   text-align: center;
 }
