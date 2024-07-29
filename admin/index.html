@@ -1,3 +1,4 @@
+<!-- admin/index.html -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,5 +9,17 @@
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      CMS.init({
+        config: {
+          backend: {
+            name: "git-gateway",
+            branch: "master",  // Use 'main' if that's your branch name
+          },
+          media_folder: "static/images/uploads",
+          public_folder: "/images/uploads",
+        },
+      });
+    </script>
   </body>
 </html>
