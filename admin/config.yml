@@ -1,6 +1,9 @@
 backend:
   name: git-gateway
-  branch: master  # Replace with your main branch name if different
+  branch: master
+  auth_scope: repo
+  base_url: https://shashankdongre.netlify.app
+  auth_endpoint: /admin/callback
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
