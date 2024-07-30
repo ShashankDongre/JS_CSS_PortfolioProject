@@ -1,11 +1,11 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: master  # or 'main' if that's your default branch
   auth_scope: repo
   base_url: https://shashankdongre.netlify.app
   auth_endpoint: /admin/callback
   client_id: Ov23liA1lCDWx8iv0oDm
-  secret: "*****ede8ce05"
+  secret: "*****ede8ce05"  # Ensure this is correctly quoted
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
